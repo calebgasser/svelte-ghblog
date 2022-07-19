@@ -1,4 +1,4 @@
-name: Tests
+name: Node CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [develop]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -22,6 +22,21 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build --if-present
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
       - run: npm run coverage
       - name: Update code coverage.
         uses: codecov/codecov-action@v3
@@ -36,3 +51,20 @@ jobs:
           tag-prefix: 'v'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com'
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
