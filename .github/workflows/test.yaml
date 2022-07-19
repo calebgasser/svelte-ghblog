@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Tests
 
 on:
   push:
@@ -23,4 +23,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm test
+      - run: npm coverage
+      - name: Update code coverage.
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/output.xml
+          flags: unittests # optional
+          name: codecov-umbrella # optional
+          verbose: true # optional (default = false)

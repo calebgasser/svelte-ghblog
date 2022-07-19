@@ -4,11 +4,13 @@
 	"lint-staged": {
 		"*.js": [
 			"prettier --write --plugin-search-dir=. .",
-			"prettier --check --plugin-search-dir=. . && eslint ."
+			"prettier --check --plugin-search-dir=. .",
+      "eslint ."
 		],
 		"*.ts": [
 			"prettier --write --plugin-search-dir=. .",
-			"prettier --check --plugin-search-dir=. . && eslint ."
+			"prettier --check --plugin-search-dir=. .",
+      "eslint ."
 		]
 	},
 	"scripts": {
@@ -18,7 +20,7 @@
 		"preview": "vite preview",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"depcheck": "depcheck",
+		"coverage": "vitest run --coverage",
 		"prepare": "svelte-kit sync && husky install",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -35,6 +37,7 @@
 		"@types/marked": "^4.0.3",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
+		"c8": "^7.12.0",
 		"depcheck": "^1.4.3",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",

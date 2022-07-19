@@ -8,7 +8,9 @@ const config = {
 	},
 	test: {
 		globals: true,
-		environment: 'jsdom'
+		environment: 'jsdom',
+		reporters: 'junit',
+		outputFile: './coverage/output.xml'
 	}
 };
 
