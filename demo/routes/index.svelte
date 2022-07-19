@@ -1,6 +1,6 @@
 <script>
 	import SvelteMarkdown from 'svelte-markdown';
-  import Code from '../lib/renderers/Code.svelte';
+	import Code from '../lib/renderers/Code.svelte';
 	import GhBlog from '../../src/GhBlog.svelte';
 	import GhBlogIndex from '../../src/GhBlogIndex.svelte';
 </script>
