@@ -1,4 +1,4 @@
 # create-svelte
 
 
-![Tests]("https://github.com/calebgasser/svelte-ghblog/workflows/test.yaml/badge.svg")
+![Tests]("https://github.com/calebgasser/svelte-ghblog/actions/workflows/test.yaml/badge.svg")
