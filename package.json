@@ -5,6 +5,10 @@
 		"*.js": [
 			"prettier --write --plugin-search-dir=. .",
 			"prettier --check --plugin-search-dir=. . && eslint ."
+		],
+		"*.ts": [
+			"prettier --write --plugin-search-dir=. .",
+			"prettier --check --plugin-search-dir=. . && eslint ."
 		]
 	},
 	"scripts": {
