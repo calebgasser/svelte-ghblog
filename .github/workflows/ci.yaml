@@ -29,7 +29,7 @@ jobs:
       - name: Update code coverage.
         uses: codecov/codecov-action@v3
         with:
-          files: ./coverage/output.xml
+          files: ./coverage/coverage-final.json
           name: codecov-umbrella
           verbose: true
       - name: 'Automated Version Bump'

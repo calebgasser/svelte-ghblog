@@ -9,6 +9,7 @@
 ![Github release](https://img.shields.io/github/v/release/calebgasser/svelte-ghblog?style=for-the-badge)
 ![Npm downloads](https://img.shields.io/npm/dm/svelte-ghblog?style=for-the-badge)
 ![Dependencies](https://img.shields.io/librariesio/release/npm/svelte-ghblog?style=for-the-badge)
+![Vulnerabilites](https://img.shields.io/snyk/vulnerabilities/npm/@calebgasser/svelte-ghblog?style=for-the-badge)
 
 # Documentation
 

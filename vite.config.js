@@ -9,8 +9,10 @@ const config = {
 	test: {
 		globals: true,
 		environment: 'jsdom',
-		reporters: 'junit',
-		outputFile: './coverage/output.xml'
+		coverage: {
+			reporter: ['json'],
+			outputFile: './coverage/output.json'
+		}
 	}
 };
 
