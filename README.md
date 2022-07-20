@@ -24,7 +24,6 @@ npm i -D svelte-ghblog
 pnpm i -D svelte-ghblog
 ```
 
-
 # Usage
 
 TODO

@@ -10,9 +10,9 @@
 		"sourceMap": true,
 		"strict": true
 	},
-  "typedocOptions": {
-    "entryPointStrategy": "resolve",
-    "entryPoints": ["src/index.ts"],
-    "out": "docs"
-  }
+	"typedocOptions": {
+		"entryPointStrategy": "resolve",
+		"entryPoints": ["src/index.ts"],
+		"out": "docs"
+	}
 }

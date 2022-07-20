@@ -41,7 +41,7 @@
 		"preview": "vite preview",
 		"test": "vitest run",
 		"test:watch": "vitest",
-    "doc": "typedoc",
+		"doc": "typedoc",
 		"coverage": "vitest run --coverage",
 		"prepare": "svelte-kit sync && husky install",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
