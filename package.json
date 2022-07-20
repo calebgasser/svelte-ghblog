@@ -1,23 +1,27 @@
 {
 	"name": "svelte-ghblog",
-	"version": "0.0.12",
-  "description": "Create a simple blog from a GitHub repo using Svelte",
-  "keywords": ["svelte", "blog", "github"],
-  "homepage": "https://github.com/calebgasser/svelte-ghblog/tree/develop#readme",
-  "bugs": {
-    "url" : "https://github.com/calebgasser/svelte-ghblog/issues",
-    "email" : "calebgasser@gmail.com"
-  },
-  "license": "GPL-3.0-only",
-  "author": {
-    "name": "Caleb Gasser",
-    "email": "calebgasser@gmail.com",
-    "url": "https://www.calebgasser.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/calebgasser/svelte-ghblog.git"
-  },
+	"version": "0.0.13",
+	"description": "Create a simple blog from a GitHub repo using Svelte",
+	"keywords": [
+		"svelte",
+		"blog",
+		"github"
+	],
+	"homepage": "https://github.com/calebgasser/svelte-ghblog/tree/develop#readme",
+	"bugs": {
+		"url": "https://github.com/calebgasser/svelte-ghblog/issues",
+		"email": "calebgasser@gmail.com"
+	},
+	"license": "GPL-3.0-only",
+	"author": {
+		"name": "Caleb Gasser",
+		"email": "calebgasser@gmail.com",
+		"url": "https://www.calebgasser.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/calebgasser/svelte-ghblog.git"
+	},
 	"lint-staged": {
 		"*.js": [
 			"prettier --write --plugin-search-dir=. .",
