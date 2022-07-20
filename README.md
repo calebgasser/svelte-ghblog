@@ -2,10 +2,10 @@
 
 > For creating a simple blog in a svelte application from a github repository
 
-![Tests](https://github.com/calebgasser/svelte-ghblog/actions/workflows/ci.yaml/badge.svg)
-[![codecov](https://codecov.io/gh/calebgasser/svelte-ghblog/branch/develop/graph/badge.svg?token=1FPPR7L0WS)](https://codecov.io/gh/calebgasser/svelte-ghblog)
-![Github Release](https://img.shields.io/github/v/release/calebgasser/svelte-ghblog)
-![NPM Downloads](https://img.shields.io/npm/dm/svelte-ghblog?style=for-the-badge)
+![Test workflow](https://img.shields.io/github/workflow/status/calebgasser/svelte-ghblog/Node%20CI?style=for-the-badge)
+![Code coverage](https://img.shields.io/codecov/c/github/calebgasser/svelte-ghblog?style=for-the-badge)
+![Github welease](https://img.shields.io/github/v/release/calebgasser/svelte-ghblog)
+![Npm downloads](https://img.shields.io/npm/dm/svelte-ghblog?style=for-the-badge)
 
 # Documentation
 
