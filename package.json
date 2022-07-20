@@ -1,6 +1,6 @@
 {
 	"name": "svelte-ghblog",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"description": "Create a simple blog from a GitHub repo using Svelte",
 	"keywords": [
 		"svelte",
