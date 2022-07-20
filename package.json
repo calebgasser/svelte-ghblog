@@ -1,9 +1,9 @@
 {
 	"name": "svelte-ghblog",
-	"version": "0.0.7",
-  "publishConfig": {
-   "@calebgasser:registry": "https://npm.pkg.github.com"
-  },
+	"version": "0.0.8",
+	"publishConfig": {
+		"@calebgasser:registry": "https://npm.pkg.github.com"
+	},
 	"lint-staged": {
 		"*.js": [
 			"prettier --write --plugin-search-dir=. .",
