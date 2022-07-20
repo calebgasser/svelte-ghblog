@@ -7,7 +7,9 @@ on:
     branches: [develop]
 
 jobs:
-  build:
+  version-bump:
+
+  build-test-release-github:
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,6 +22,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          registry-url: 'npm.pkg.github.com'
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run coverage
@@ -41,6 +44,43 @@ jobs:
       - name: Create NPMRC
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+      - name: Publish to registries
+        run: npm publish
+
+  build-test-release-npm:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm run coverage
+      - name: Update code coverage.
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/output.xml
+          name: codecov-umbrella
+          verbose: true
+      - name: 'Automated Version Bump'
+        id: version-bump
+        uses: 'phips28/gh-action-bump-version@master'
+        with:
+          tag-prefix: 'v'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set package registry
+        run: npm config set registry https://registry.npmjs.org
+      - name: Create NPMRC
+        run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
       - name: Publish to registries
         run: npm publish
