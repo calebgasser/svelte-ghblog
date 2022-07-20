@@ -4,7 +4,7 @@
 
 ![Test workflow](https://img.shields.io/github/workflow/status/calebgasser/svelte-ghblog/Node%20CI?style=for-the-badge)
 ![Code coverage](https://img.shields.io/codecov/c/github/calebgasser/svelte-ghblog?style=for-the-badge)
-![Github welease](https://img.shields.io/github/v/release/calebgasser/svelte-ghblog)
+![Github release](https://img.shields.io/github/v/release/calebgasser/svelte-ghblog?style=for-the-badge)
 ![Npm downloads](https://img.shields.io/npm/dm/svelte-ghblog?style=for-the-badge)
 
 # Documentation
