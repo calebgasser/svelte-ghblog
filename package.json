@@ -1,6 +1,6 @@
 {
 	"name": "svelte-ghblog",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"publishConfig": {
 		"@calebgasser:registry": "https://npm.pkg.github.com"
 	},
