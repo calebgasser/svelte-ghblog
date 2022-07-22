@@ -2,6 +2,8 @@
 
 > For creating a simple blog in a svelte application from a github repository
 
+Try it on [StackBlitz](https://stackblitz.com/edit/svelte-ghblog?file=README.md)
+
 ![Test workflow](https://img.shields.io/github/workflow/status/calebgasser/svelte-ghblog/Node%20CI?style=for-the-badge)
 ![Code coverage](https://img.shields.io/codecov/c/github/calebgasser/svelte-ghblog?style=for-the-badge)
 ![Github package version](https://img.shields.io/github/package-json/v/calebgasser/svelte-ghblog?label=Github%20Package%20Version&style=for-the-badge)
@@ -14,9 +16,9 @@
 # Roadmap
 
 - [X] Inital working PoC
-- [] More customizable interface to render the index (file browser)
-- [] Full test coverage 
-- [] Full documentation/finish readme
+- [ ] More customizable interface to render the index (file browser)
+- [ ] Full test coverage 
+- [ ] Full documentation/finish readme
 
 # Documentation
 
