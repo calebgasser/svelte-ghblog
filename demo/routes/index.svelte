@@ -3,6 +3,12 @@
 	import Code from '../lib/renderers/Code.svelte';
 	import GhBlog from '../../src/GhBlog.svelte';
 	import GhBlogIndex from '../../src/GhBlogIndex.svelte';
+  let ghBlogSettings = {
+    repo: "calebgasser/svelte-ghblog",
+    branch: "develop",
+    subDirectory: "example-blog",
+    trimSubdiretory: true
+  };
 </script>
 
 <div style="width: 100vw; height: 100vh; background-color: slategray; padding: 16px;">
@@ -14,7 +20,7 @@
 			<GhBlogIndex />
 		</div>
 		<div style="align-content: center; justify-content: center; width: 75%; padding-left: 6px">
-      <GhBlog repo={'calebgasser/svelte-ghblog'} branch={'develop'} subDirectory={'example-blog'} let:file>
+      <GhBlog {...ghBlogSettings} let:file>
 				<div slot="loading">
 					<h1>Loading...</h1>
 				</div>
