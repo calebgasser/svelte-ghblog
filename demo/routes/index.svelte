@@ -11,12 +11,11 @@
 			class="flex"
 			style="display: flex; flex-direction: column; border-right: solid 1px; padding-right: 6px"
 		>
-			<GhBlogIndex let:setDisplay let:path>
-				<button on:click={setDisplay(path)}>{path}</button>
+			<GhBlogIndex>
 			</GhBlogIndex>
 		</div>
 		<div style="align-content: center; justify-content: center; width: 75%; padding-left: 6px">
-			<GhBlog let:file>
+      <GhBlog repo={"calebgasser/cgasser-blog"} branch={"develop"} let:file>
 				<div slot="loading">
 					<h1>Loading...</h1>
 				</div>
@@ -29,6 +28,16 @@
 </div>
 
 <style>
+  ul {
+		padding: 0.2em 0 0 0.5em;
+		margin: 0 0 0 0.5em;
+		list-style: none;
+		border-left: 1px solid #eee;
+	}
+
+	li {
+		padding: 0.2em 0;
+	}
 	.flex-container {
 		display: flex;
 		flex-direction: row;

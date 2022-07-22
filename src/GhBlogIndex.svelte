@@ -1,17 +1,16 @@
 <script type="text/typescript">
-	import { displayPage, markdownPaths } from './store';
+  import GhBlogCategory from './GhBlogCategory.svelte'
+  import GhBlogFolder from './GhBlogFolder.svelte';
+  import { 
+    displayPage, 
+    markdownPaths,
+    directories, 
+    type Directory 
+  } from './store';
 
-	function tree(paths: Array<string>) {
-		let result = {};
-		paths.forEach((p: string) => p.split('/').reduce((o, k) => (o[k] = o[k] || {}), result));
-		console.log(result);
-	}
-	function setDisplay(path: string) {
-		$displayPage = path;
-	}
+  let categoryName = "";
+
 </script>
 
-{tree($markdownPaths)}
-{#each $markdownPaths as path}
-	<slot {setDisplay} {path} />
-{/each}
+
+<GhBlogFolder name="Blog" files={$directories} expanded={true}></GhBlogFolder>
