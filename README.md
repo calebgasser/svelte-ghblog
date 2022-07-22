@@ -11,6 +11,13 @@
 ![Dependencies](https://img.shields.io/librariesio/release/npm/svelte-ghblog?style=for-the-badge)
 ![Vulnerabilites](https://img.shields.io/snyk/vulnerabilities/npm/@calebgasser/svelte-ghblog?style=for-the-badge)
 
+# Roadmap
+
+- [X] Inital working PoC
+- [] More customizable interface to render the index (file browser)
+- [] Full test coverage 
+- [] Full documentation/finish readme
+
 # Documentation
 
 TODO
