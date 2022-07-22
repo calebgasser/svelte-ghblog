@@ -2,7 +2,7 @@
 
 > For creating a simple blog in a svelte application from a github repository
 
-Try it on [StackBlitz](https://stackblitz.com/edit/svelte-ghblog?file=README.md)
+Try it on [StackBlitz](https://stackblitz.com/edit/svelte-ghblog?file=demo/routes/index.svelte)
 
 ![Test workflow](https://img.shields.io/github/workflow/status/calebgasser/svelte-ghblog/Node%20CI?style=for-the-badge)
 ![Code coverage](https://img.shields.io/codecov/c/github/calebgasser/svelte-ghblog?style=for-the-badge)
@@ -17,12 +17,14 @@ Try it on [StackBlitz](https://stackblitz.com/edit/svelte-ghblog?file=README.md)
 
 - [X] Inital working PoC
 - [ ] More customizable interface to render the index (file browser)
+- [ ] Finishing setting up commitlint
 - [ ] Full test coverage 
+- [ ] Use zod for schema validation
 - [ ] Full documentation/finish readme
 
 # Documentation
 
-TODO
+Until the documentation is completed you can reference the `demo` folder for how to use.
 
 # Installation
 
@@ -39,11 +41,11 @@ pnpm i -D @calebgasser/svelte-ghblog
 
 # Usage
 
-TODO
+Until the documentation is completed you can reference the `demo` folder for how to use.
 
 # Examples
 
-TODO
+Until the documentation is completed you can reference the `demo` folder for how to use.
 
 # Contributing
 
