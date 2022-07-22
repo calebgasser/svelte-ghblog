@@ -3,6 +3,7 @@
 
 	export let repo = '';
 	export let branch = '';
+  export let subDirectory = '';
 
 	/**
 	 * The hierarchy between files in a Git repository.
@@ -83,7 +84,7 @@
 			})
 		).json();
 		for (let tree of ghData['tree']) {
-			if (tree.path?.includes('.md')) {
+			if (tree.path?.includes('.md') && tree.path?.startsWith(subDirectory)) {
 				let fileReq: string = await (
 					await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/${tree.path}`)
 				).text();

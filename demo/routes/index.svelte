@@ -14,7 +14,7 @@
 			<GhBlogIndex />
 		</div>
 		<div style="align-content: center; justify-content: center; width: 75%; padding-left: 6px">
-			<GhBlog repo={'calebgasser/cgasser-blog'} branch={'develop'} let:file>
+      <GhBlog repo={'calebgasser/svelte-ghblog'} branch={'develop'} subDirectory={'example-blog'} let:file>
 				<div slot="loading">
 					<h1>Loading...</h1>
 				</div>

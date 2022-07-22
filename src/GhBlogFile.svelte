@@ -7,9 +7,7 @@
 	$: noExtensionName = name.slice(0, name.lastIndexOf('.'));
 
 	function setDisplay() {
-		console.log($displayPage);
 		$displayPage = path;
-		console.log($displayPage);
 	}
 </script>
 
