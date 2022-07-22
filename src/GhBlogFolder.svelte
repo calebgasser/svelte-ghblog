@@ -1,10 +1,10 @@
 <script type="text/typescript">
 	import GhBlogFile from './GhBlogFile.svelte';
-  import type { Directory } from "./store";
+	import type { Directory } from './store';
 
 	export let expanded = false;
 	export let name: string;
-  export let files: Array<Directory>;
+	export let files: Array<Directory>;
 
 	function toggle() {
 		expanded = !expanded;
@@ -13,15 +13,14 @@
 
 <span class:expanded on:click={toggle}>{name}</span>
 
-
 {#if expanded}
 	<ul>
 		{#each files as file}
 			<li>
-        {#if file.files.length > 0}
-					<svelte:self name={file.name} files={file.files} expanded={expanded}/>
+				{#if file.files.length > 0}
+					<svelte:self name={file.name} files={file.files} {expanded} />
 				{:else}
-					<GhBlogFile {...file}/>
+					<GhBlogFile {...file} />
 				{/if}
 			</li>
 		{/each}

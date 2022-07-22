@@ -11,11 +11,10 @@
 			class="flex"
 			style="display: flex; flex-direction: column; border-right: solid 1px; padding-right: 6px"
 		>
-			<GhBlogIndex>
-			</GhBlogIndex>
+			<GhBlogIndex />
 		</div>
 		<div style="align-content: center; justify-content: center; width: 75%; padding-left: 6px">
-      <GhBlog repo={"calebgasser/cgasser-blog"} branch={"develop"} let:file>
+			<GhBlog repo={'calebgasser/cgasser-blog'} branch={'develop'} let:file>
 				<div slot="loading">
 					<h1>Loading...</h1>
 				</div>
@@ -28,7 +27,7 @@
 </div>
 
 <style>
-  ul {
+	ul {
 		padding: 0.2em 0 0 0.5em;
 		margin: 0 0 0 0.5em;
 		list-style: none;

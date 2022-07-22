@@ -1,13 +1,12 @@
 <script type="text/typescript">
-  import { directories } from "./store";
-  import type { Directory } from "./store";
-  export let directory: Directory; 
-  export let directoryName = "";
-  export let isFile = false;
-  console.log("isFile: " + isFile)
-  console.log("Category: ")
-  console.log(directory)
-
+	import { directories } from './store';
+	import type { Directory } from './store';
+	export let directory: Directory;
+	export let directoryName = '';
+	export let isFile = false;
+	console.log('isFile: ' + isFile);
+	console.log('Category: ');
+	console.log(directory);
 </script>
 
 <!--
