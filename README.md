@@ -16,7 +16,7 @@ Try it on [StackBlitz](https://stackblitz.com/edit/svelte-ghblog?file=demo/route
 # Roadmap
 
 - [X] Inital working PoC
-- [ ] More customizable interface to render the index (file browser)
+- [X] More customizable interface to render the index (file browser)
 - [ ] Finishing setting up commitlint
 - [ ] Full test coverage 
 - [ ] Use zod for schema validation

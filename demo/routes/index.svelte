@@ -1,5 +1,7 @@
-<script>
+<script types="text/typescript">
 	import SvelteMarkdown from 'svelte-markdown';
+	import CustomFolderRenderer from '../lib/renderers/CustomFolderRenderer.svelte';
+	import CustomFileRenderer from '../lib/renderers/CustomFileRenderer.svelte';
 	import Code from '../lib/renderers/Code.svelte';
 	import GhBlog from '../../src/GhBlog.svelte';
 	import GhBlogIndex from '../../src/GhBlogIndex.svelte';
@@ -7,8 +9,11 @@
     repo: "calebgasser/svelte-ghblog",
     branch: "develop",
     subDirectory: "example-blog",
-    trimSubdiretory: true
   };
+  let ghBlogIndexRenderers = {
+    folder: CustomFolderRenderer,
+    file: CustomFileRenderer
+  }
 </script>
 
 <div style="width: 100vw; height: 100vh; background-color: slategray; padding: 16px;">
@@ -17,7 +22,7 @@
 			class="flex"
 			style="display: flex; flex-direction: column; border-right: solid 1px; padding-right: 6px"
 		>
-			<GhBlogIndex />
+			<GhBlogIndex renderers={ghBlogIndexRenderers}/>
 		</div>
 		<div style="align-content: center; justify-content: center; width: 75%; padding-left: 6px">
       <GhBlog {...ghBlogSettings} let:file>

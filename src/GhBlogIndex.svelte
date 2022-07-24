@@ -1,9 +1,12 @@
 <script type="text/typescript">
-	import GhBlogCategory from './GhBlogCategory.svelte';
 	import GhBlogFolder from './GhBlogFolder.svelte';
-	import { displayPage, markdownPaths, directories, type Directory } from './store';
-
-	let categoryName = '';
+  import FolderRenderer from './renderers/FolderRenderer.svelte';
+  import FileRenderer from './renderers/FileRenderer.svelte';
+	import { directories } from './store';
+  export let renderers = {
+    folder: FolderRenderer,
+    file: FileRenderer
+  }
 </script>
 
-<GhBlogFolder name="Blog" files={$directories} expanded={true} />
+<GhBlogFolder files={$directories} renderers={renderers}/>

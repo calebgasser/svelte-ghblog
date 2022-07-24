@@ -1,22 +1,18 @@
 <script type="text/typescript">
-	import type { Directory } from './store';
+  import { SvelteComponentTyped } from 'svelte/internal';
 	import { displayPage } from './store';
+  type C = $$Generic<typeof SvelteComponentTyped<any, any, any>>;
 
 	export let name = '';
 	export let path = '';
+  export let renderer: C;
 	$: noExtensionName = name.slice(0, name.lastIndexOf('.'));
+  $: isSelected = $displayPage === path 
 
-	function setDisplay() {
+	function setAsDisplayPage() {
 		$displayPage = path;
 	}
 </script>
 
-<span on:click={setDisplay}>{noExtensionName}</span>
-
-<style>
-	span {
-		padding: 0 0 0 1.5em;
-		background: 0 0.1em no-repeat;
-		background-size: 1em 1em;
-	}
-</style>
+<svelte:component this={renderer} name={noExtensionName} setAsDisplayPage={setAsDisplayPage} {isSelected}>
+</svelte:component>

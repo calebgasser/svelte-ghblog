@@ -4,7 +4,6 @@
 	export let repo = '';
 	export let branch = '';
   export let subDirectory = '';
-  export let trimSubdiretory = false;
 
 	/**
 	 * The hierarchy between files in a Git repository.
@@ -89,21 +88,16 @@
 				let fileReq: string = await (
 					await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/${tree.path}`)
 				).text();
-        if (trimSubdiretory){
           $markdownPaths = [...$markdownPaths, tree.path?.replace(subDirectory + "/", "")];
           $markdownFiles.set(tree.path.replace(subDirectory + "/", ""), fileReq || '');
-        } else {
-				  $markdownPaths = [...$markdownPaths, tree.path || ""];
-				  $markdownFiles.set(tree.path || "", fileReq || '');
-        }
 			}
 		}
 		$directories = parseDirectories($markdownPaths);
-		$displayPage = $directories[0].name;
-		console.log($directories);
+		$displayPage = $markdownPaths[0] || "";
 	}
 </script>
 
+<slot></slot>
 {#await getData()}
 	<slot name="loading">Loading...</slot>
 {:then}
