@@ -1,6 +1,9 @@
 ---
 name: Code Coverage
 on:
+  push:
+    branches:
+      - "develop"
   workflow_run:
     workflows:
       - "VersionBump"

@@ -1,8 +1,11 @@
 ---
 name: Version Bump
 on:
+  push:
+    branches:
+      - "develop"
   workflow_run:
-    workflows: ["TestRelease"]
+    workflows: ["Test"]
     branches: [develop]
     types:
       - completed

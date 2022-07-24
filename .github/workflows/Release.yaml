@@ -1,6 +1,9 @@
 ---
 name: Release
 on:
+  push:
+    branches:
+      - "develop"
   workflow_run:
     workflows:
       - "CodeCoverage"
