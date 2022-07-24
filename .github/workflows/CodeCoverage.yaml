@@ -6,7 +6,7 @@ on:
       - "develop"
   workflow_run:
     workflows:
-      - "VersionBump"
+      - "Version Bump"
     branches:
       - "develop"
     types:
