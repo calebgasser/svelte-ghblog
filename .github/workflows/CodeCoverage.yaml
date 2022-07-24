@@ -1,0 +1,36 @@
+---
+name: Code Coverage
+on:
+  workflow_run:
+    workflows:
+      - "VersionBump"
+    branches:
+      - "develop"
+    types:
+      - completed
+
+jobs:
+  code-coverage:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests and generate coverage
+        run: npm run coverage
+      - name: Update code coverage.
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/coverage-final.json
+          name: codecov-umbrella
+          verbose: true

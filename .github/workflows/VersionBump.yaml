@@ -1,0 +1,25 @@
+---
+name: Version Bump
+on:
+  workflow_run:
+    workflows: ["TestRelease"]
+    branches: [develop]
+    types:
+      - completed
+jobs:
+  version-bump:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: 'Automated Version Bump'
+        id: version-bump
+        uses: 'phips28/gh-action-bump-version@master'
+        with:
+          tag-prefix: 'v'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
