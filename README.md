@@ -4,7 +4,7 @@
 
 Try it on [StackBlitz](https://stackblitz.com/edit/svelte-ghblog?file=demo/routes/index.svelte)
 
-![Test workflow](https://img.shields.io/github/workflow/status/calebgasser/svelte-ghblog/Node%20CI?style=for-the-badge)
+![Test workflow](https://img.shields.io/github/workflow/status/calebgasser/svelte-ghblog/Test/develop?label=Tests&style=for-the-badge)
 ![Code coverage](https://img.shields.io/codecov/c/github/calebgasser/svelte-ghblog?style=for-the-badge)
 ![Github package version](https://img.shields.io/github/package-json/v/calebgasser/svelte-ghblog?label=Github%20Package%20Version&style=for-the-badge)
 ![Npm package versino](https://img.shields.io/npm/v/@calebgasser/svelte-ghblog?label=npm%20package%20version&style=for-the-badge)
