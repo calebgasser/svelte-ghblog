@@ -1,18 +1,18 @@
 <script type="text/typescript">
-  export let name = '';
-  export let expanded = true;
-  function toggle(){
-    expanded = !expanded;
-  }
+	export let name = '';
+	export let expanded = true;
+	function toggle() {
+		expanded = !expanded;
+	}
 </script>
-
 
 <span class:expanded on:click={toggle}>{name}</span>
 {#if expanded}
-  <ul>
-    <slot></slot>  
-  </ul>
+	<ul>
+		<slot />
+	</ul>
 {/if}
+
 <style>
 	span {
 		padding: 0 0 0 1.5em;
@@ -27,5 +27,4 @@
 		list-style: none;
 		border-left: 1px solid #eee;
 	}
-
 </style>

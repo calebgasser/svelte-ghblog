@@ -3,12 +3,12 @@ name: Code Coverage
 on:
   push:
     branches:
-      - "develop"
+      - 'develop'
   workflow_run:
     workflows:
-      - "Version Bump"
+      - 'Version Bump'
     branches:
-      - "develop"
+      - 'develop'
     types:
       - completed
 

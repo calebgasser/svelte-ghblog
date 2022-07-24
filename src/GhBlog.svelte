@@ -3,7 +3,7 @@
 
 	export let repo = '';
 	export let branch = '';
-  export let subDirectory = '';
+	export let subDirectory = '';
 
 	/**
 	 * The hierarchy between files in a Git repository.
@@ -88,16 +88,16 @@
 				let fileReq: string = await (
 					await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/${tree.path}`)
 				).text();
-          $markdownPaths = [...$markdownPaths, tree.path?.replace(subDirectory + "/", "")];
-          $markdownFiles.set(tree.path.replace(subDirectory + "/", ""), fileReq || '');
+				$markdownPaths = [...$markdownPaths, tree.path?.replace(subDirectory + '/', '')];
+				$markdownFiles.set(tree.path.replace(subDirectory + '/', ''), fileReq || '');
 			}
 		}
 		$directories = parseDirectories($markdownPaths);
-		$displayPage = $markdownPaths[0] || "";
+		$displayPage = $markdownPaths[0] || '';
 	}
 </script>
 
-<slot></slot>
+<slot />
 {#await getData()}
 	<slot name="loading">Loading...</slot>
 {:then}

@@ -3,12 +3,12 @@ name: Release
 on:
   push:
     branches:
-      - "develop"
+      - 'develop'
   workflow_run:
     workflows:
-      - "Code Coverage"
+      - 'Code Coverage'
     branches:
-      - "develop"
+      - 'develop'
     types:
       - completed
 

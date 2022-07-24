@@ -15,10 +15,10 @@ Try it on [StackBlitz](https://stackblitz.com/edit/svelte-ghblog?file=demo/route
 
 # Roadmap
 
-- [X] Inital working PoC
-- [X] More customizable interface to render the index (file browser)
+- [x] Inital working PoC
+- [x] More customizable interface to render the index (file browser)
 - [ ] Finishing setting up commitlint
-- [ ] Full test coverage 
+- [ ] Full test coverage
 - [ ] Use zod for schema validation
 - [ ] Full documentation/finish readme
 

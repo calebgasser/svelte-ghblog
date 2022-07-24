@@ -3,9 +3,9 @@ name: Version Bump
 on:
   push:
     branches:
-      - "develop"
+      - 'develop'
   workflow_run:
-    workflows: ["Test"]
+    workflows: ['Test']
     branches: [develop]
     types:
       - completed

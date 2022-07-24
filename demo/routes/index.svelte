@@ -5,15 +5,15 @@
 	import Code from '../lib/renderers/Code.svelte';
 	import GhBlog from '../../src/GhBlog.svelte';
 	import GhBlogIndex from '../../src/GhBlogIndex.svelte';
-  let ghBlogSettings = {
-    repo: "calebgasser/svelte-ghblog",
-    branch: "develop",
-    subDirectory: "example-blog",
-  };
-  let ghBlogIndexRenderers = {
-    folder: CustomFolderRenderer,
-    file: CustomFileRenderer
-  }
+	let ghBlogSettings = {
+		repo: 'calebgasser/svelte-ghblog',
+		branch: 'develop',
+		subDirectory: 'example-blog'
+	};
+	let ghBlogIndexRenderers = {
+		folder: CustomFolderRenderer,
+		file: CustomFileRenderer
+	};
 </script>
 
 <div style="width: 100vw; height: 100vh; background-color: slategray; padding: 16px;">
@@ -22,10 +22,10 @@
 			class="flex"
 			style="display: flex; flex-direction: column; border-right: solid 1px; padding-right: 6px"
 		>
-			<GhBlogIndex renderers={ghBlogIndexRenderers}/>
+			<GhBlogIndex renderers={ghBlogIndexRenderers} />
 		</div>
 		<div style="align-content: center; justify-content: center; width: 75%; padding-left: 6px">
-      <GhBlog {...ghBlogSettings} let:file>
+			<GhBlog {...ghBlogSettings} let:file>
 				<div slot="loading">
 					<h1>Loading...</h1>
 				</div>

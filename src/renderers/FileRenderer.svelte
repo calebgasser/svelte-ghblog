@@ -1,10 +1,10 @@
 <script type="text/typescript">
-  export let name = '';
-  export let setAsDisplayPage: ()=>any;
+	export let name = '';
+	export let setAsDisplayPage: () => any;
 </script>
 
 <li>
-  <span on:click={setAsDisplayPage}>{name}</span>
+	<span on:click={setAsDisplayPage}>{name}</span>
 </li>
 
 <style>
@@ -17,5 +17,4 @@
 	li {
 		padding: 0.2em 0;
 	}
-
 </style>
